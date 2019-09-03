@@ -40,6 +40,7 @@ nav::after {
 }
 
 nav .navegacion {
+  margin-right: 8rem;
   float: right;
   margin-top: 13px;
   padding: 1rem;
@@ -621,16 +622,18 @@ nav .logo:hover {
 }
 
 .navegacionmobil__boton {
-  background-color: white;
+  background-color: black;
   height: 7rem;
   width: 7rem;
   position: fixed;
-  top: 6rem;
+  top: 4rem;
   right: 6rem;
   border-radius: 50%;
   z-index: 2000;
   -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.541);
           box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.541);
+  text-align: center;
+  cursor: pointer;
 }
 
 .navegacionmobil__fondo {
@@ -707,15 +710,56 @@ nav .logo:hover {
   right: 0;
 }
 
+.navegacionmobil__icon {
+  position: relative;
+  margin-top: 3.5rem;
+}
+
 .navegacionmobil__icon, .navegacionmobil__icon::before, .navegacionmobil__icon::after {
   width: 3rem;
   height: 2px;
-  background-color: red;
+  background-color: #1eff00;
   display: inline-block;
 }
 
 .navegacionmobil__icon::before, .navegacionmobil__icon::after {
   content: "";
+  position: absolute;
+  left: 0;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.navegacionmobil__icon::before {
+  top: -.8rem;
+}
+
+.navegacionmobil__icon::after {
+  top: .8rem;
+}
+
+.navegacionmobil__boton:hover .navegacionmobil__icon::before {
+  top: -1.1rem;
+}
+
+.navegacionmobil__boton:hover .navegacionmobil__icon::after {
+  top: 1.1rem;
+}
+
+.navegacionmobil__checkbox:checked + .navegacionmobil__boton .navegacionmobil__icon {
+  background-color: transparent;
+}
+
+.navegacionmobil__checkbox:checked + .navegacionmobil__boton .navegacionmobil__icon::after {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.navegacionmobil__checkbox:checked + .navegacionmobil__boton .navegacionmobil__icon::before {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .padre {
