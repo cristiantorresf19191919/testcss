@@ -1,0 +1,86 @@
+$color-oscuro: #222;
+$color-fondo: rgba(0, 0, 0, 0.472);
+$orange-color: #333;
+$nice-weight:400;
+$ancho-boton:150px;
+$color-claro:#eee;
+$color-menu-a:#eee;
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin estilo-de-texto ($argumento-weight, $color) {
+  text-decoration: none;
+  color: $color-menu-a;
+  font-weight: $argumento-weight;
+  
+  transition: all .2s;
+  &:hover{
+    font-weight: 520;
+    font-size: 2.2rem;
+  }
+}
+
+@mixin Titulo {
+  text-align: center;
+  color: $color-oscuro;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  font-size: 3rem;
+  text-shadow: 2px 2px 40px $color-oscuro;
+  transition: all .5s;
+}
+
+nav {
+  background-color: $color-fondo;
+  position: fixed;
+  width: 97%;
+  @include clearfix;
+  z-index: 4;  
+  .navegacion {    
+    float: right;
+    margin-top: 13px;
+    padding: 1rem;
+    &__elementos {
+      display: inline-block;
+      margin-right: 30px;
+      &:first-child {
+        margin-left: 20px;
+      }         
+     
+    }    
+    &__links {        
+      &:link {
+        @include estilo-de-texto(500, $color-menu-a);
+       
+      }  
+      &:visited {
+        @include estilo-de-texto(500, $color-menu-a);
+      }  
+     
+    } 
+    
+   
+  }
+  .caja-logo {
+    float: left;
+    
+    left: 8rem;   
+    z-index: 99;
+    margin-bottom: -5rem;
+  }
+.logo {
+    height: 11.5rem;
+    transition: all 0.4s;
+    margin-left: 7%;
+    &:hover {
+      transform: skew(-15deg);
+    }
+  }
+}
+

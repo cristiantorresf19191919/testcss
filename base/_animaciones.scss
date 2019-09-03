@@ -1,0 +1,54 @@
+@keyframes AnimacionTitulo {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px) rotate(0);
+    }
+    68% {
+        transform: rotate(-34deg);
+    }
+    87% {
+        transform: translateX(2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes AnimacionDescripcion {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    87% {
+        transform: translateX(-10rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes botonAnimacion {
+    0% {
+        opacity: 0;
+        transform: translateY(8rem);
+    }
+    75% {
+        transform: translateY(-2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes product-moving {
+    0%{
+        transform: translateX(-10rem);
+
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}

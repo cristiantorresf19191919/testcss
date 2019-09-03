@@ -1,0 +1,102 @@
+@media screen and (max-width:1666px) {
+
+    .productImg-container {        
+        left: -67% ;
+        top: -64% ;
+    }
+    .img-product {
+        width: 28rem !important ;
+    }
+    .circulo-verde {
+        width: 59rem ;
+        height: 78rem ;
+        top: -15rem ;
+        left: -10rem ;
+        height: 44rem ;
+    }
+    .h1-header--titulo {
+        display: block;
+        font-size: 3rem;
+    }
+    .h1-header--descripcion {
+        display: block;
+        font-size: 5rem;
+    }
+    nav .navegacion li a:link {
+        text-decoration: none;
+        color:#eee;
+        font-weight: 500;
+        font-size: 1.9rem;
+    }
+    nav .logo {
+        height: 10.5rem;
+    }
+    nav{
+        width: 95%;
+        height: 10%;
+    }
+    .container-yellow-bar {
+        margin-top: -1.6%;
+    }
+   
+}
+@media screen and (max-width:794px) {
+    .productImg-container {
+        left: -60% ;    
+        top: -40% ;    
+    }    
+    .img-product {
+        width: 20rem ;
+    }    
+    .circulo-verde {
+        width: 39rem ;
+        height: 60rem ;
+        top: -15rem ;
+        left: -10rem ;
+        height: 44rem ;
+    }    
+    .h1-header--titulo {
+        display: block;
+        font-size: 3rem;
+    }    
+    .h1-header--descripcion {
+        display: block;
+        font-size: 5rem;
+    }
+}
+@media screen and (max-width:1030px){
+    .productImg-container {
+        left: -74% ;
+        top: -40% ;       
+    }
+}
+@media screen and (max-width:700px){
+    .productImg-container {
+        left: -74% ;
+        top: -40% ;  
+        width: 20rem;     
+    }
+    .img-product {
+        width: 24rem !important ;
+    }
+    .circulo-verde {
+        width: 59rem ;
+        height: 78rem ;
+        top: -15rem ;
+        left: -10rem ;
+        height: 24rem ;
+    }
+    .h1-header--titulo {
+        display: block;
+        font-size: 1rem;
+    }    
+    .h1-header--descripcion {
+        display: block;
+        font-size: 2rem;
+    }
+}
+
+.menu-mobile{
+    position: fixed;
+    z-index: 999;
+}

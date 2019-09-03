@@ -1,0 +1,64 @@
+.h1-header {
+    color: #fff;
+    &--titulo {
+        display: block;
+        font-size: 6rem;
+        letter-spacing: 1rem;
+        font-style: italic;
+        font-weight: 900;
+        animation-name: AnimacionTitulo;
+        animation-duration: 3s;
+        animation-timing-function: ease-in;
+    }
+    &--descripcion {
+        display: block;
+        font-size: 6rem;
+        color: rgb(158, 255, 13);        
+        font-weight: 900;
+        font-style: italic;
+        /* animation: AnimacionDescripcion 3s cubic-bezier(0.165, 0.84, 0.44, 1); */
+        animation-name: AnimacionDescripcion;
+        animation-duration: 3s;
+        animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        /* animation-delay: 3s; */
+    }
+}
+
+.heading-secundary {
+    /* 1 rem = 10px */
+    /* si 16px son 100% */
+    /* cuanto % son 10px*/
+    // font-size: 62.5%;
+    // 350px
+    font-size: 3.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    // do not fill 100% of the screen since h1 is a block element
+    display: inline-block;
+    background-image: linear-gradient(to right, $color-primario, $color-secundario);
+    // only apply the background image to the text
+    -webkit-background-clip: text;
+    // invisible to see the gradient
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all .3s;
+    &:hover {
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba($color-dark, .4);
+    }
+}
+
+.heading-tertiary {
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: unset;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+    line-height: 4.1rem;
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}

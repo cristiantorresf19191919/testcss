@@ -1,0 +1,39 @@
+$espacioMargin:6rem;
+.row {
+    // If the viewport is smaller than the width specified then it will simply fills 100%
+    // of the available space
+    width: $row-grid-width;
+    // border: 1px solid black;
+    margin: 0 auto;
+    // select everything except the last child
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+    // clearfix hack
+    @include clearfixHack;
+    // las clases que empiecen con col- , fundamento de no repetir codigo
+    [class^="col-"] {
+        // background-color: red;
+        // border: 1px solid rgba($color-dark, .7);
+        float: left;
+        &:not(:last-child) {
+            margin-right: $espacioMargin;
+        }
+    }
+    .col-1-of-2 {
+        width: calc((100% - #{$espacioMargin})/2);
+    }
+    .col-1-of-3 {
+        width: calc((100% - (2*#{$espacioMargin}))/3);
+    }
+    .col-2-of-3 {
+        width: calc((100% - #{$espacioMargin}) -((100% - (2*#{$espacioMargin}))/3));
+        // width: calc((3*#{$espacioMargin})+#{$espacioMargin});
+    }
+    .col-1-of-4 {
+        width: calc((100% - 3*#{$espacioMargin})/4);
+    }
+    .col-3-of-4 {
+        width: calc(2*#{$espacioMargin} + 3*((100% - 3*#{$espacioMargin})/4));
+    }
+}

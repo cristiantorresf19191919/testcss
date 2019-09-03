@@ -1,0 +1,25 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    /* forzo que la propiedad que herede desde body */
+    box-sizing: inherit;
+}
+
+html {
+    /* 1 rem = 10px */
+    /* si 16px son 100% */
+    /* cuanto % son 10px*/
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Helvetica, sans-serif; 
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 7rem;
+    padding: 2.7rem;
+    /* por defecto no se hereda */
+    box-sizing: border-box;
+}

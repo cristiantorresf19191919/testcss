@@ -1,0 +1,15 @@
+.header {
+    background-image: linear-gradient(95deg, rgba($color-primario, 0.5685), rgba($color-secundario, 0.5685)), url("assets/burbujasbackground.jpg");
+    height: 100vh;
+    filter: grayscale(48%);
+    background-size: cover;
+    position: relative;
+    background-position: top;
+    &__caja-texto {
+        position: absolute;
+        top: 65%;
+        left: 62%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
